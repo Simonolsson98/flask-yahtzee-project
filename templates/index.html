@@ -17,11 +17,11 @@
         </tr>
         <tr>
             <td>Three of a kind</td>
-            <td>{{ tretal_prob }}</td>
+            <td>{{ three_of_a_kind }}</td>
         </tr>
         <tr>
             <td>Four of a kind</td>
-            <td>{{ fyrtal_prob }}</td>
+            <td>{{ four_of_a_kind }}</td>
         </tr>
         <tr>
             <td>Full House</td>
@@ -32,22 +32,21 @@
             <td>{{ yahtzee_prob }}</td>
         </tr>
     </table>
-
+    <br>
     <form action="{{ url_for('after_input') }}" method="POST">
     <img src="../static/{{ old_1 }}.png" width = 30 height = 30 alt="die_value_1">
-    <label style = "font-size: 40;">Insert value of 1st die:</label>
-        <select name="roll1">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="none" selected disabled hidden> 
-                {{ old_1 }} 
-            </option>
-        </select>
-        
+        <label>Insert value of 1st die:</label>
+            <select name="roll1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="1" selected disabled hidden> 
+                    {{ old_1 }} 
+                </option>
+            </select>
         <br>
         <img src="../static/{{ old_2 }}.png" width = 30 height = 30 alt="die_value_2">
         <label>Insert value of 2nd die:</label>
@@ -58,12 +57,12 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option value="none" selected disabled hidden> 
+                <option value="1" selected disabled hidden> 
                     {{ old_2 }} 
                 </option>
             </select>
             <br>
-        <img src="../static/{{old_3}}.png" width = 30 height = 30 alt="die_value_3">
+        <img src="../static/{{ old_3 }}.png" width = 30 height = 30 alt="die_value_3">
         <label>Insert value of 3rd die:</label>
             <select name="roll3">
                 <option value="1">1</option>
@@ -72,7 +71,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option value="none" selected disabled hidden> 
+                <option value="1" selected disabled hidden> 
                     {{ old_3 }} 
                 </option>
             </select>

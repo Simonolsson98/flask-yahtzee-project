@@ -1,20 +1,27 @@
 body, html {
+    background-image: url("../dice.png");
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .content {
     margin: 0 auto;
     width: 400px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 table, td, th {
-    border: 1px solid #aaa;
+    border: 2px solid black;
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
     width: 100%;
 }
 
@@ -24,13 +31,5 @@ th {
 
 td {
     text-align: center;
-    padding: 5px;
-}
-
-.form {
-    margin-top: 20px;
-}
-
-#content {
-    width: 70%;
+    padding: 7px;
 }
