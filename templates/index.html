@@ -1,0 +1,92 @@
+{% extends "base.html"%}
+
+
+{% block head %}
+<title> Yatzy Probabilities </title>
+{% endblock %}
+
+
+{% block body %}
+<div class = "content">
+    <h1 style = "text-align: center;">Yatzy Probabilities</h1>
+
+    <table id = "probabilities">
+        <tr>
+            <th>Goal</th>
+            <th>Probability</th>
+        </tr>
+        <tr>
+            <td>Three of a kind</td>
+            <td>{{ tretal_prob }}</td>
+        </tr>
+        <tr>
+            <td>Four of a kind</td>
+            <td>{{ fyrtal_prob }}</td>
+        </tr>
+        <tr>
+            <td>Full House</td>
+            <td>{{ full_house_prob }}</td>
+        </tr>
+        <tr>
+            <td>Yahtzee</td>
+            <td>{{ yahtzee_prob }}</td>
+        </tr>
+    </table>
+
+    <form action="{{ url_for('after_input') }}" method="POST">
+    <img src="../static/{{ old_1 }}.png" width = 30 height = 30 alt="die_value_1">
+    <label style = "font-size: 40;">Insert value of 1st die:</label>
+        <select name="roll1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="none" selected disabled hidden> 
+                {{ old_1 }} 
+            </option>
+        </select>
+        
+        <br>
+        <img src="../static/{{ old_2 }}.png" width = 30 height = 30 alt="die_value_2">
+        <label>Insert value of 2nd die:</label>
+            <select name="roll2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="none" selected disabled hidden> 
+                    {{ old_2 }} 
+                </option>
+            </select>
+            <br>
+        <img src="../static/{{old_3}}.png" width = 30 height = 30 alt="die_value_3">
+        <label>Insert value of 3rd die:</label>
+            <select name="roll3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="none" selected disabled hidden> 
+                    {{ old_3 }} 
+                </option>
+            </select>
+            <br><br>
+        <label>Throws left:</label>
+            <select name="throw">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        <button id = "submit">Submit</button>
+
+        
+   </form>
+
+</div>
+
+{% endblock %}
