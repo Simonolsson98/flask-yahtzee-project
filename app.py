@@ -26,13 +26,13 @@ def calc_prob(die1, die2, die3, throwcount):
             return [1 * 100, round(2/6 * 100, 2), round(1/6 * 100, 2), round(1/(6**2) * 100, 2)]
         elif(die1 == die2 or die2 == die3 or die1 == die3):
             return [round(3/6 * 100, 2), round((347/4997) * 100, 2), round(0.2222 * 100, 2), round(1/(6**3) * 100, 4)]
-        return [-1,-1,-1,-1]
+        return ["error","error","error","error"]
     else: #throwcount = 2
         if(die1 == die2 and die2 == die3):
             return [1 * 100, round(4/6 * 100, 2), round(2/6 * 100, 2), round(2/(6**2) * 100, 2)]
         elif(die1 == die2 or die2 == die3 or die1 == die3):
             return [round((132/216) * 100, 2), round(0.11574*2 * 100, 2), round(0.4444 * 100, 2), round(1/(6**3) * 100, 4)]
-        return [-1,-1,-1,-1]
+        return ["error","error","error","error"]
 
 
 if __name__ == "__main__":
