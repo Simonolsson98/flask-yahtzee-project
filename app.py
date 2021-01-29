@@ -19,7 +19,6 @@ def after_input():
     else:
         return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1")
 
-
 def calc_prob(die1, die2, die3, throwcount):
     if throwcount == "1":
         if(die1 == die2 and die2 == die3):
