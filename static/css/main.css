@@ -1,9 +1,6 @@
 body, html {
     background-image: url("../dice.png");
     height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
@@ -12,6 +9,9 @@ body, html {
 
 .content {
     margin: 0 auto;
+    position:fixed;
+    left: 540px;
+    bottom: 300px;
     width: 400px;
     font-size: 17px;
 }
@@ -26,10 +26,10 @@ table {
 }
 
 th {
-    height: 30px;
+    height: 35px;
 }
 
 td {
     text-align: center;
-    padding: 7px;
+    padding: 6px;
 }
