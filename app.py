@@ -3,11 +3,8 @@ from flask.globals import request
 from werkzeug.utils import redirect
 app = Flask(__name__)
 
-@app.route("/", methods = ["POST", "GET"])
-def index():
-    return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1")
 
-@app.route("/hello", methods = ["POST", "GET"])
+@app.route("/", methods = ["POST", "GET"])
 def after_input():
     if request.method == "POST":
         list_of_dices = [request.form.get('roll1'), request.form.get('roll2'), request.form.get('roll3')] 
@@ -20,7 +17,8 @@ def after_input():
         return render_template("index.html", three_of_a_kind = f"{list_of_probs[0]}%", four_of_a_kind = f"{list_of_probs[1]}%", 
         full_house_prob = f"{list_of_probs[2]}%", yahtzee_prob = f"{list_of_probs[3]}%", old_1 = die1, old_2 = die2, old_3 = die3)
     else:
-        return "please return your dice values"
+        return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1")
+
 
 def calc_prob(die1, die2, die3, throwcount):
     if throwcount == "1":
