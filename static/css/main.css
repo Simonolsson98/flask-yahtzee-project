@@ -14,12 +14,21 @@ body, html {
     bottom: 300px;
     width: 400px;
     font-size: 17px;
+    
 }
-
+.content h1{
+    text-shadow: 2px 1px 2px white;
+    color:black
+}
+.content label{
+    text-shadow: 2px 1px 2px white;
+}
 .go_for {
     margin: 0 auto;
     position:fixed;
-    color: aqua;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-weight:500;
     font-size: 30px;
     left: 540px;
     bottom: 200px;
@@ -29,6 +38,7 @@ body, html {
 
 table, td, th {
     border: 2px solid black;
+    text-shadow: 2px 1px 2px white;
 }
 
 table {
@@ -38,9 +48,12 @@ table {
 
 th {
     height: 35px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 2px black;
 }
 
 td {
     text-align: center;
     padding: 6px;
+    font-size: 17px;
 }
