@@ -16,6 +16,17 @@ body, html {
     font-size: 17px;
 }
 
+.go_for {
+    margin: 0 auto;
+    position:fixed;
+    color: aqua;
+    font-size: 30px;
+    left: 540px;
+    bottom: 200px;
+    width: 400px;
+    font-size: 20px;
+}
+
 table, td, th {
     border: 2px solid black;
 }
