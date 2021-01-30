@@ -80,6 +80,9 @@
             <select name="throw">
                 <option value="1">1</option>
                 <option value="2">2</option>
+                <option value="{{ old_throw }}" selected hidden>
+                    {{ old_throw }}
+                </option>
             </select>
         <button id = "submit">Submit</button>
    </form>
