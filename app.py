@@ -13,11 +13,25 @@ def after_input():
         die2 = list_of_dices[1]
         die3 = list_of_dices[2]
         list_of_probs = calc_prob(die1, die2, die3, throws)
+        if max(list_of_probs) == 100: #ignore 100% since you cant "go for" something you already have
+            max_probability = sorted(list_of_probs, reverse=True)[1]
+        else:
+            max_probability = max(list_of_probs)
+        index = list_of_probs.index(max_probability)
+        if index == 0:
+            max_prob = "three of a kind"
+        elif index == 1:
+            max_prob = "four of a kind"
+        elif index == 2:
+            max_prob = "full house"
+        else: 
+            max_prob = "yahthee"
 
         return render_template("index.html", three_of_a_kind = f"{list_of_probs[0]}%", four_of_a_kind = f"{list_of_probs[1]}%", 
-        full_house_prob = f"{list_of_probs[2]}%", yahtzee_prob = f"{list_of_probs[3]}%", old_1 = die1, old_2 = die2, old_3 = die3)
+        full_house_prob = f"{list_of_probs[2]}%", yahtzee_prob = f"{list_of_probs[3]}%", old_1 = die1, old_2 = die2, old_3 = die3, 
+        max_prob = max_prob, old_throw = "1")
     else:
-        return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1")
+        return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1", old_throw = "2")
 
 def calc_prob(die1, die2, die3, throwcount):
     if throwcount == "1":
