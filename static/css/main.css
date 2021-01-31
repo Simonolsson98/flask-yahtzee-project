@@ -17,12 +17,13 @@ body, html {
     font-weight: 500;
 }
 .content h1{
-    text-shadow: 2px 1px 2px white;
-    color:black
+    text-shadow: 4px 4px 4px black;
+    color:white
 }
 .content label{
-    text-shadow: 2px 1px 2px white;
+    text-shadow: 2px 2px 2px white;
     font-weight: 500;
+    font-size: 20px;
 }
 .go_for {
     margin: 0 auto;
