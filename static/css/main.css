@@ -14,7 +14,7 @@ body, html {
     bottom: 300px;
     width: 400px;
     font-size: 17px;
-    
+    font-weight: 500;
 }
 .content h1{
     text-shadow: 2px 1px 2px white;
@@ -22,6 +22,7 @@ body, html {
 }
 .content label{
     text-shadow: 2px 1px 2px white;
+    font-weight: 500;
 }
 .go_for {
     margin: 0 auto;
