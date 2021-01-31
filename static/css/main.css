@@ -4,6 +4,7 @@ body, html {
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
+    bottom: 300;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
@@ -11,7 +12,6 @@ body, html {
     margin: 0 auto;
     position:fixed;
     left: 540px;
-    bottom: 300px;
     width: 400px;
     font-size: 17px;
     font-weight: 500;
