@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route("/", methods = ["POST", "GET"])
 def after_input():
     if request.method == "POST":
-        list_of_dices = [request.form.get('roll1'), request.form.get('roll2'), request.form.get('roll3')] 
-        throws = request.form.get("throw")        
+        list_of_dices = [int(request.form.get('roll1')), int(request.form.get('roll2')), int(request.form.get('roll3'))] 
+        throws = int(request.form.get("throw"))
         die1 = list_of_dices[0]
         die2 = list_of_dices[1]
         die3 = list_of_dices[2]
@@ -26,12 +26,24 @@ def after_input():
             max_prob = "full house"
         else: 
             max_prob = "yahthee"
+        if list_of_dices.count(1) == 3:
+            ones = 100
+        else:
+            ones = 100 * round((5 - list_of_dices.count(1)) * (1 / 6), 3) #TODO: figure out math here
+        if list_of_dices.count(2) == 3:
+            twos = 100
+        else:
+            twos = 100 * round((5 - list_of_dices.count(2)) * (1 / 6), 3) #TODO: figure out math here
+        if list_of_dices.count(3) == 3:
+            threes = 100
+        else: 
+            threes = 100 * round((5 - list_of_dices.count(3)) * (1 / 6), 3) #TODO: figure out math here
 
         return render_template("index.html", three_of_a_kind = f"{list_of_probs[0]}%", four_of_a_kind = f"{list_of_probs[1]}%", 
         full_house_prob = f"{list_of_probs[2]}%", yahtzee_prob = f"{list_of_probs[3]}%", old_1 = die1, old_2 = die2, old_3 = die3, 
-        max_prob = max_prob, old_throw = "1")
+        max_prob = max_prob, old_throw = 1, ones = f"{ones}%", twos = f"{twos}%", threes = f"{threes}%")
     else:
-        return render_template("index.html", old_1 = "1", old_2 = "1", old_3 = "1", old_throw = "2")
+        return render_template("index.html", old_1 = 1, old_2 = 1, old_3 = 1, old_throw = 2)
 
 def calc_prob(die1, die2, die3, throwcount):
     if throwcount == "1":
