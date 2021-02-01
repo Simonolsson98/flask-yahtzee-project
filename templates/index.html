@@ -16,6 +16,10 @@
             <th>Probability</th>
         </tr>
         <tr>
+            <td>Three 1's</td>
+            <td>{{ ones }}</td>
+        </tr>
+        <tr>
             <td>Three of a kind</td>
             <td>{{ three_of_a_kind }}</td>
         </tr>
@@ -34,9 +38,10 @@
     </table>
     <br>
     <form action="{{ url_for('after_input') }}" method="POST">
-    <img src="../static/{{ old_1 }}.png" width = 30 height = 30 alt="die_value_1">
+    <div style = "top: 500px;">
+        <img src="../static/{{ old_1 }}.png" width = 30 height = 30 alt="die_value_1">
         <label>Insert value of 1st die:</label>
-            <select name="roll1">
+            <select position = 2px name="roll1">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -76,6 +81,7 @@
                 </option>
             </select>
             <br><br>
+    </div>
         <label>Throws left:</label>
             <select name="throw">
                 <option value="1">1</option>
@@ -84,7 +90,7 @@
                     {{ old_throw }}
                 </option>
             </select>
-        <button id = "submit">Calculate probabilities</button>
+        <button>Calculate probabilities</button>
    </form>
 </div>
 
