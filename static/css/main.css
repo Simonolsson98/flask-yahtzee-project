@@ -44,6 +44,9 @@ body, html {
     left: 200px;
     bottom: 200px;
 }
+.roll button{
+    bottom: 100 px;
+}
 
 table, td, th {
     border: 2px solid black;
