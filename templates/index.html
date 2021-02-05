@@ -107,12 +107,13 @@
 </div>
 
 <div class = "roll">
-    <form action="{{ url_for('after_input') }}" method="POST">
         <img src="../static/{{ roll1 }}.png" width = 30 height = 30 alt="die_roll_1">
         <img src="../static/{{ roll2 }}.png" width = 30 height = 30 alt="die_roll_2">
         <img src="../static/{{ roll3 }}.png" width = 30 height = 30 alt="die_roll_3">
+    <form action="{{ url_for('after_input') }}" method="POST">
         <button>Roll the die!</button>
     </form>    
+
 </div>
 
 {% endblock %}
