@@ -1,14 +1,26 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask.globals import request
 from werkzeug.utils import redirect
-app = Flask(__name__)
+import numpy as np
 
+app = Flask(__name__)
 
 @app.route("/", methods = ["POST", "GET"])
 def after_input():
     if request.method == "POST":
-        list_of_dices = [int(request.form.get('roll1')), int(request.form.get('roll2')), int(request.form.get('roll3'))] 
-        throws = int(request.form.get("throw"))
+        roll1 = 1
+        roll2 = 1
+        roll3 = 1
+        try:
+            list_of_dices = [int(request.form.get('roll1')), int(request.form.get('roll2')), int(request.form.get('roll3'))] 
+            throws = int(request.form.get("throw"))
+        except:
+            roll1 = np.random.randint(1, 7)
+            roll2 = np.random.randint(1, 7)
+            roll3 = np.random.randint(1, 7)
+            list_of_dices = [1, 1, 1]
+            throws = 2
+
         die1 = list_of_dices[0]
         die2 = list_of_dices[1]
         die3 = list_of_dices[2]
@@ -41,9 +53,10 @@ def after_input():
 
         return render_template("index.html", three_of_a_kind = f"{list_of_probs[0]}%", four_of_a_kind = f"{list_of_probs[1]}%", 
         full_house_prob = f"{list_of_probs[2]}%", yahtzee_prob = f"{list_of_probs[3]}%", old_1 = die1, old_2 = die2, old_3 = die3, 
-        max_prob = max_prob, old_throw = 1, ones = f"{ones}%", twos = f"{twos}%", threes = f"{threes}%")
+        max_prob = max_prob, old_throw = 1, ones = f"{ones}%", twos = f"{twos}%", threes = f"{threes}%", roll1 = roll1, roll2 = roll2, 
+        roll3 = roll3)
     else:
-        return render_template("index.html", old_1 = 1, old_2 = 1, old_3 = 1, old_throw = 2)
+        return render_template("index.html", old_1 = 1, old_2 = 1, old_3 = 1, old_throw = 2)    
 
 def calc_prob(die1, die2, die3, throwcount):
     if throwcount == "1":
