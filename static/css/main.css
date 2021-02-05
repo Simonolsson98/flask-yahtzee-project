@@ -38,6 +38,13 @@ body, html {
     font-size: 20px;
 }
 
+.roll {
+    margin: 0 auto;
+    position:fixed;
+    left: 400px;
+    bottom: 200px;
+}
+
 table, td, th {
     border: 2px solid black;
     text-shadow: 2px 1px 2px white;
