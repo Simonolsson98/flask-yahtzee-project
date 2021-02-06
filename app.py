@@ -6,6 +6,11 @@ import numpy as np
 app = Flask(__name__)
 
 @app.route("/", methods = ["POST", "GET"])
+def home():
+    return render_template("base.html")
+
+
+@app.route("/yahtzee", methods = ["POST", "GET"])
 def after_input():
     if request.method == "POST":
         roll1 = 1
