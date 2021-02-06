@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    {% block head %}{% endblock %}
+    {% block head %}
+    <form action="{{ url_for('after_input') }}" method="POST">
+    <button>
+        Calculate probabilities
+    </button>
+
+    </form>
+    {% endblock %}
 </head>
 <body>
     {% block body %}{% endblock %}
