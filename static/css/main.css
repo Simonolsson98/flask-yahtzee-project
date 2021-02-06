@@ -44,17 +44,23 @@ body, html {
     left: 200px;
     bottom: 200px;
 }
+
 .roll button{
-    bottom: 100 px;
+    background-color: paleturquoise; /* Green */
+    padding: 15px 12px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2.5px 5px 10px #000000;
+    display: inline-block;
+    font-size: 16px;    
 }
 
-.probs {
-    background-color: paleturquoise; /* Green */
+.probs, .home{
+    background-color: paleturquoise;
     border: none;
     color: black;
     position: absolute;
     left: 300px;
-    top: 300px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
