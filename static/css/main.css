@@ -59,9 +59,22 @@ body, html {
     background-color: paleturquoise;
     border: none;
     color: black;
-    position: absolute;
+    box-shadow: 2.5px 5px 10px #000000;
+    position: relative;
     left: 300px;
     padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
+}
+.calc {
+    background-color: paleturquoise;
+    border: none;
+    color: black;
+    box-shadow: 2.5px 5px 10px #000000;
+    position: relative;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -71,7 +84,8 @@ body, html {
 
 table, td, th {
     border: 2px solid black;
-    text-shadow: 2px 1px 2px white;
+    background: lightblue;
+    text-shadow: 1.5px 2px 2px grey;
 }
 
 table {
@@ -81,8 +95,6 @@ table {
 
 th {
     height: 35px;
-    color: whitesmoke;
-    text-shadow: 3px 3px 2px black;
 }
 
 td {
