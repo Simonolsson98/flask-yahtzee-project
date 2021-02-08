@@ -68,6 +68,10 @@ body, html {
     display: inline-block;
     font-size: 16px;    
 }
+.calc:hover, .home:hover, .probs:hover, .roll:hover{
+    opacity: 1;
+    background-color: aquamarine;
+}
 .calc {
     background-color: rgba(173, 216, 230, 0.7);
     border: none;
