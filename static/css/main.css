@@ -46,7 +46,7 @@ body, html {
 }
 
 .roll button{
-    background-color: paleturquoise; /* Green */
+    background-color: rgba(173, 216, 230, 0.7);
     padding: 15px 12px;
     text-align: center;
     text-decoration: none;
@@ -56,7 +56,7 @@ body, html {
 }
 
 .probs, .home{
-    background-color: paleturquoise;
+    background-color: rgba(173, 216, 230, 0.7);
     border: none;
     color: black;
     box-shadow: 2.5px 5px 10px #000000;
@@ -69,7 +69,7 @@ body, html {
     font-size: 16px;    
 }
 .calc {
-    background-color: paleturquoise;
+    background-color: rgba(173, 216, 230, 0.7);
     border: none;
     color: black;
     box-shadow: 2.5px 5px 10px #000000;
@@ -84,7 +84,7 @@ body, html {
 
 table, td, th {
     border: 2px solid black;
-    background: lightblue;
+    background: rgba(173, 216, 230, 0.5);
     text-shadow: 1.5px 2px 2px grey;
 }
 
