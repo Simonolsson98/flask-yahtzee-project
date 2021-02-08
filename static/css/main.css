@@ -70,7 +70,7 @@ body, html {
 }
 .calc:hover, .home:hover, .probs:hover, .rollbtn:hover{
     opacity: 1;
-    background-color: aquamarine;
+    background-color: rgb(99, 238, 238);
 }
 .calc {
     background-color: rgba(173, 216, 230, 0.7);
