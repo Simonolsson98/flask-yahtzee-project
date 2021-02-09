@@ -25,6 +25,21 @@ body, html {
     font-weight: 500;
     font-size: 20px;
 }
+
+div#banner { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: #DDEEEE; 
+    width: 100%; 
+  }
+  div#banner-content { 
+    width: 1080px; 
+    margin: 0 auto; 
+    padding: 10px; 
+    border: 1px solid #000;
+  }
+
 .go_for {
     margin: 0 auto;
     position:fixed;
@@ -43,6 +58,7 @@ body, html {
     position:fixed;
     left: 200px;
     bottom: 200px;
+    
 }
 
 .roll button{
