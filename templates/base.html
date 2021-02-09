@@ -8,10 +8,9 @@
 <body>
     <div id="banner">
         <div id="banner-content">
-            This is your banner text, centered 
-            and fixed at 800px in width
+            <a class = "banner_home" href = "{{ url_for('home') }}">Home</a>
+            <a class = "banner_calc" href = "{{ url_for('after_input') }}">Calculate probabilities</a>  
             {% block head %}
-                <a href="{{ url_for('after_input') }}">Calculate probabilities</a>  
             {% endblock %}
         </div>
     </div>
