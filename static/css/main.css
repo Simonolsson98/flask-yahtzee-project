@@ -1,6 +1,7 @@
 body, html {
     background-image: url("../dice.png");
     height: 100%;
+    max-height: 400px;
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
@@ -8,8 +9,9 @@ body, html {
 }
 .content {
     margin: 0 auto;
-    position:fixed;
+    position:absolute;
     left: 540px;
+    bottom:100px;
     width: 400px;
     font-size: 17px;
     font-weight: 500;
@@ -24,27 +26,6 @@ body, html {
     font-size: 20px;
 }
 
-div#banner { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    background-color: #DDEEEE; 
-    width: 100%; 
-  }
-  div#banner-content { 
-    width: 1080px; 
-    margin: 0 auto; 
-    padding: 10px; 
-  }
-
-  .banner_home, .banner_calc {
-    color: green;
-    background-color: white;
-    text-decoration: none;
-    padding: 5px;
-    border: solid rgb(0, 0, 0) 2px;
-  }
-
 .go_for {
     margin: 0 auto;
     position:fixed;
@@ -53,11 +34,35 @@ div#banner {
     font-weight:500;
     font-size: 30px;
     left: 540px;
-    bottom: 70px;
+    bottom: 20px;
     width: 400px;
     font-size: 20px;
 }
 
+div#banner { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: rgba(173, 216, 230, 0.7);; 
+    width: 100%; 
+  }
+div#banner-content { 
+    width: 1080px; 
+    margin: 0 auto; 
+    padding: 15px; 
+}
+
+.banner_home, .banner_calc {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border: dashed rgb(0, 0, 0) 3px;
+}
+
+.banner_home:hover, .banner_calc:hover{
+    color: blue;
+}
 .roll {
     margin: 0 auto;
     position:fixed;
