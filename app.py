@@ -12,7 +12,7 @@ def home():
 
 @app.route("/yahtzee", methods = ["POST", "GET"])
 def after_input():
-    if request.method == "POST":
+    if request.method == "POST" or request.method == "GET":
         roll1 = 1
         roll2 = 1
         roll3 = 1
@@ -61,10 +61,10 @@ def after_input():
         max_prob = max_prob, old_throw = 1, ones = f"{ones}%", twos = f"{twos}%", threes = f"{threes}%", roll1 = roll1, roll2 = roll2, 
         roll3 = roll3)
     else:
-        return render_template("index.html", old_1 = 1, old_2 = 1, old_3 = 1, old_throw = 2)    
+        return render_template("index.html", old_1 = 1, old_2 = 1, old_3 = 1, old_throw = 2, roll1 = 1, roll2 = 2, roll3 = 3)    
 
 def calc_prob(die1, die2, die3, throwcount):
-    if throwcount == "1":
+    if throwcount == 1:
         if(die1 == die2 and die2 == die3):
             return [1 * 100, round(2/6 * 100, 2), round(1/6 * 100, 2), round(1/(6**2) * 100, 2)]
         elif(die1 == die2 or die2 == die3 or die1 == die3):
