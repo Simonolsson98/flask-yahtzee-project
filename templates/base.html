@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    {% block head %}
-    <form action="{{ url_for('after_input') }}" method="POST">
-        <button class="probs">Calculate <br> probabilities</button>   
-    </form>
-    {% endblock %}
 </head>
 <body>
+    <div id="banner">
+        <div id="banner-content">
+            This is your banner text, centered 
+            and fixed at 800px in width
+            {% block head %}
+                <a href="{{ url_for('after_input') }}">Calculate probabilities</a>  
+            {% endblock %}
+        </div>
+    </div>
     {% block body %}{% endblock %}
 </body>
 </html>
