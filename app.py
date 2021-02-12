@@ -79,7 +79,7 @@ def calc_prob(die1, die2, die3, throwcount):
 
 @app.route("/count-cards", methods = ["POST", "GET"])
 def count_cards():
-    return render_template("index.html")
+    return render_template("cards.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
