@@ -43,7 +43,7 @@ div#banner {
     position: absolute; 
     top: 0; 
     left: 0; 
-    background-color: rgba(173, 216, 230, 0.7);; 
+    background-color: rgba(173, 216, 230, 0.7); 
     width: 100%; 
   }
 div#banner-content { 
@@ -54,10 +54,10 @@ div#banner-content {
 
 .banner_home, .banner_calc {
     color: black;
-    background-color: white;
+    background-color: rgba(173, 216, 230, 0.7);
     text-decoration: none;
     padding: 5px;
-    border: dashed rgb(0, 0, 0) 3px;
+    border: ridge white 4px;
 }
 
 .banner_home:hover, .banner_calc:hover{
@@ -101,7 +101,7 @@ div#banner-content {
 .calc, .probs, .home, .roll button{
     background-color: rgba(173, 216, 230, 0.7);
     transition-duration: 0.5s;
-    border: 2px rgba(173, 216, 230) ridge;
+    border: 2px white ridge;
     border-width: 7px;
 }
 .calc:hover, .home:hover, .probs:hover, .rollbtn:hover{
