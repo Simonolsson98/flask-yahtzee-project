@@ -52,12 +52,12 @@ div#banner-content {
     padding: 15px; 
 }
 
-.banner_home, .banner_calc {
+.banner_home, .banner_calc, .banner_cards {
     color: black;
     background-color: rgba(173, 216, 230, 0.7);
     text-decoration: none;
     padding: 5px;
-    border: ridge white 4px;
+    border: ridge white 5px;
 }
 
 .banner_home:hover, .banner_calc:hover{
