@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% endblock %}
 </head>
 <body>
     <div id="banner">
@@ -11,8 +13,6 @@
             <a class = "banner_home" href = "{{ url_for('home') }}">Home</a>
             <a class = "banner_calc" href = "{{ url_for('after_input') }}">Calculate probabilities</a>
             <a class = "banner_cards" href = "{{ url_for('count_cards') }}">Count cards</a>  
-            {% block head %}
-            {% endblock %}
         </div>
     </div>
     {% block body %}{% endblock %}
