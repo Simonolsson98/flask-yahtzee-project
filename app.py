@@ -77,6 +77,9 @@ def calc_prob(die1, die2, die3, throwcount):
             return [round((132/216) * 100, 2), round(0.11574*2 * 100, 2), round(0.4444 * 100, 2), round(2/(6**3) * 100, 4)]
         return ["error","error","error","error"]
 
+@app.route("/count-cards", methods = ["POST", "GET"])
+def count_cards():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
