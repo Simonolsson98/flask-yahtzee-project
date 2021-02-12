@@ -7,6 +7,7 @@ body, html {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 .content {
     margin: 0 auto;
     position:absolute;
@@ -60,7 +61,7 @@ div#banner-content {
     border: ridge white 5px;
 }
 
-.banner_home:hover, .banner_calc:hover{
+.banner_home:hover, .banner_calc:hover, .banner_cards:hover{
     color: blue;
 }
 .roll {
